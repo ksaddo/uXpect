@@ -64,13 +64,16 @@ export default function ScrollStack() {
   }, []);
 
   return (
-    <section className="relative">
+    <section className="relative px-4 md:px-[30px] xl:px-[50px] 2xl:px-[110px]">
       {/* title */}
-      <p className="text-2xl md:text-5xl font-bold text-center mb-10 lg:mb-20">
-        Our
-        <span className=" font-bruno text-[var(--primary)]"> RECENT </span>
-        Work
-      </p>
+
+      <div className="mb-10 lg:mb-20">
+        <p className="font-bold font-bruno text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl ">
+          OUR
+          <span className="text-[var(--primary)] "> RECENT </span>
+          PROJECTS
+        </p>
+      </div>
 
       {/* Stepper (sticky top) */}
       <div className="hidden lg:flex items-center justify-center gap-8 sticky top-20 ">

@@ -10,8 +10,6 @@ import Plans from "./components/Plans";
 import Faq from "./components/Faq";
 import Marquee from "./components/Marquee";
 import GlassHero from "./components/herosection/GlassHero";
-import GetWebsite from "./components/GetWebsite";
-import GetWebsite2 from "./components/GetWebsite2";
 import Lottie from "./components/lottieAnimation/Lottie";
 import Button2 from "./components/Button2";
 import Expertise from "./components/Expertise";
@@ -19,26 +17,26 @@ import ScrollStack from "./components/ScrollStack";
 import CategoryHero from "./components/CategoryHero";
 import ScrollStack2 from "./components/ScrollStack2";
 import HexagonGrid from "./components/HexagonGrid";
+import Process from "./components/Process";
 
 export default function Home() {
   return (
-    <div>
+    <div className="pb-40 space-y-36 lg:space-y-44 2xl:space-y-50">
       <GlassHero />
+
+      <Process />
+      <ScrollStack />
+      <Expertise />
+      <HexagonGrid />
+      <Plans />
+      <Faq />
       {/* <Marquee /> */}
       {/* <Lottie Got a PROJECT IN MIND?/> */}
-      <div className="px-4 md:px-[30px] xl:px-[50px] 2xl:px-[110px] space-y-16 lg:space-y-24 2xl:space-y-30">
-        <GetWebsite2 />
-        <Expertise />
-        {/* <Opportunities
+      {/* <Opportunities
           icon={Brush}
           title="Web Experiences That Work"
           desc="We Build Modern Websites"
         /> */}
-        <HexagonGrid />
-        <ScrollStack />
-        <Plans />
-        <Faq />
-      </div>
     </div>
   );
 }

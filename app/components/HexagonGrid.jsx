@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { MessageCircleMore, FileText, Palette, Laptop, Rocket, Wrench, Hexagon,} from "lucide-react"; //prettier-ignore
+import { MessageCircleMore, FileText, Palette, Laptop, Rocket, Wrench, Hexagon, Section,} from "lucide-react"; //prettier-ignore
 
 export default function HexagonGrid() {
   const hexagons = [
@@ -30,71 +30,80 @@ export default function HexagonGrid() {
       sub: ["Modelling", "Texturing", "Sculpting"],
     },
     {
-      title: "MONGO DB",
+      title: "DATABASES",
       img: "/icons/php.jpeg",
       sub: ["Schema Design", "Aggregation", "Atlas Integration"],
     },
   ];
 
   return (
-    <div className="flex flex-col items-center gap-12 lg:gap-0 lg:flex-row lg:items-center lg:justify-around lg:bg-neutral-900 lg:border border-dashed border-neutral-700 rounded-3xl py-0 lg:py-6 2xl:py-10">
-      {/* hexagon section */}
-      <div className="flex flex-col items-center space-y-[-30px] lg:space-y-[-40px]">
-        {/* Row 1: 3 */}
-        <div className="flex gap-2 justify-center">
-          {hexagons.slice(0, 3).map((item, i) => (
-            <Hex
-              key={i}
-              {...item}
-            />
-          ))}
-        </div>
-
-        {/* Row 2: 2 */}
-        <div className="flex gap-2 justify-center">
-          {hexagons.slice(3, 5).map((item, i) => (
-            <Hex
-              key={i}
-              {...item}
-            />
-          ))}
-        </div>
-
-        {/* Row 3: 1 */}
-        <div className="flex justify-center">
-          <Hex {...hexagons[5]} />
-        </div>
-      </div>
-
-      {/* table section */}
-      <div className=" overflow-x-auto">
-        <table className="w-full lg:w-fit border-collapse text-left">
-          <tbody>
-            {hexagons.map((skill) => (
-              <tr
-                key={skill.title}
-                className="border-b border-dashed border-neutral-700">
-                {/* Left - Title */}
-                <td className="p-3 w-fit">{skill.title}</td>
-
-                {/* Right - Subcategories */}
-                {skill.sub.map((item, index) => (
-                  <td
-                    key={index}
-                    className={`px-4 py-6 text-gray-400 w-fit ${
-                      index > 1
-                        ? "hidden md:table-cell lg:hidden xl:table-cell"
-                        : ""
-                    }`}>
-                    {item}
-                  </td>
-                ))}
-              </tr>
+    <section className="px-4 md:px-[30px] xl:px-[50px] 2xl:px-[110px]">
+      <p className="text-5xl md:text-7xl lg:text-8xl xl:text-[9rem] font-black text-center text-neutral-600 mb-14 xl:mb-20 2xl:mb-0">
+        SKILL
+        <span className="italic font-bold font-bruno text-[var(--primary)]">
+          S
+        </span>
+        ETS
+      </p>
+      <div className=" flex flex-col items-center gap-12 lg:gap-0 lg:flex-row lg:items-center lg:justify-around lg:bg-black lg:border border-dashed border-neutral-700 rounded-3xl py-0 lg:py-6 2xl:py-10">
+        {/* hexagon section */}
+        <div className="flex flex-col items-center space-y-[-30px] lg:space-y-[-40px]">
+          {/* Row 1: 3 */}
+          <div className="flex gap-2 justify-center">
+            {hexagons.slice(0, 3).map((item, i) => (
+              <Hex
+                key={i}
+                {...item}
+              />
             ))}
-          </tbody>
-        </table>
+          </div>
+
+          {/* Row 2: 2 */}
+          <div className="flex gap-2 justify-center">
+            {hexagons.slice(3, 5).map((item, i) => (
+              <Hex
+                key={i}
+                {...item}
+              />
+            ))}
+          </div>
+
+          {/* Row 3: 1 */}
+          <div className="flex justify-center">
+            <Hex {...hexagons[5]} />
+          </div>
+        </div>
+
+        {/* table section */}
+        <div className=" overflow-x-auto">
+          <table className="w-full lg:w-fit border-collapse text-left">
+            <tbody>
+              {hexagons.map((skill) => (
+                <tr
+                  key={skill.title}
+                  className="border-b border-dashed border-neutral-700">
+                  {/* Left - Title */}
+                  <td className="p-3 w-fit">{skill.title}</td>
+
+                  {/* Right - Subcategories */}
+                  {skill.sub.map((item, index) => (
+                    <td
+                      key={index}
+                      className={`px-4 py-6 font-light text-neutral-400 w-fit ${
+                        index > 1
+                          ? "hidden md:table-cell lg:hidden xl:table-cell"
+                          : ""
+                      }`}>
+                      {item}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

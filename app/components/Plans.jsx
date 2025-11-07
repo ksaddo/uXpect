@@ -8,8 +8,8 @@ export default function Plans() {
     {
       image: "/raincut.jpg",
       title: "Starter",
-      price: "$60",
-      billing: "to $199",
+      price: "$100",
+      billing: "to $300",
       desc: "Perfect for small projects",
       shadow: "shadow-white/20",
       features: [
@@ -24,8 +24,8 @@ export default function Plans() {
     {
       image: "/raincut1.jpg",
       title: "Professional",
-      price: "$200",
-      billing: "to $499",
+      price: "$300",
+      billing: "to $500",
       desc: "Best for growing businesses",
       shadow: "shadow-red-500/40",
       features: [
@@ -43,7 +43,7 @@ export default function Plans() {
       image: "/raincut2.jpg",
       title: "Premium",
       price: "$500",
-      billing: "to $999",
+      billing: "to Ꝏ	",
       desc: "For big projects & companies",
       shadow: "shadow-white/20",
       features: [
@@ -60,7 +60,7 @@ export default function Plans() {
   ];
 
   return (
-    <section className="w-full font-light">
+    <section className="w-full px-4 md:px-[30px] xl:px-[50px] 2xl:px-[110px]">
       <Opportunities
         icon={Brush}
         title="One time payment plans"
@@ -70,13 +70,13 @@ export default function Plans() {
         Have unique needs? Reach out or pick a plan that works for you.
       </p>
 
-      <div className="grid lg:grid-cols-3 gap-8 px-0 2xl:px-10 mt-20">
+      <div className="grid lg:grid-cols-3 gap-8 px-0 2xl:px-10 mt-20 font-light">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`relative group rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform`}>
+            className={`relative group rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform pattern4`}>
             {/* Glass overlay */}
-            <div className="relative z-10 h-full bg-[#171718] border border-neutral-800 p-6 2xl:p-8 flex flex-col rounded-2xl transition ">
+            <div className="relative z-10 h-full border border-neutral-800 p-6 2xl:p-8 flex flex-col rounded-2xl transition ">
               {/* Header */}
               <div className="flex items-center justify-between">
                 <h3 className="text-xl text-white">{plan.title}</h3>
@@ -87,7 +87,9 @@ export default function Plans() {
 
               {/* Price */}
               <div className="flex items-start gap-2 my-4 2xl:my-6">
-                <p className="text-4xl text-white font-bruno">{plan.price}</p>
+                <p className="text-4xl text-[var(--primary)] font-bruno">
+                  {plan.price}
+                </p>
                 <p className="text-sm mt-2 text-gray-200  font-bruno">
                   {plan.billing}
                 </p>

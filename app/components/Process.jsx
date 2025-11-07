@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Button2 from "../components/Button2";
-import { MessageCircleMore, FileText, Palette, Laptop, Rocket, Wrench, X, ChevronDown} from "lucide-react"; //prettier-ignore
+import Button2 from "./Button2";
+import { MessageCircleMore, FileText, Palette, Laptop, Rocket, Wrench, X, Plus} from "lucide-react"; //prettier-ignore
 
 import Signupemail from "./Signupemail";
 import { useState } from "react";
 
 // Main page
-export default function GetWebsite2() {
+export default function Process() {
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggleStep = (i) => {
@@ -16,6 +16,7 @@ export default function GetWebsite2() {
       prev.includes(i) ? prev.filter((x) => x !== i) : [...prev, i]
     );
   };
+
   const steps = [
     {
       title: "1. Discovery",
@@ -45,23 +46,24 @@ export default function GetWebsite2() {
   ];
 
   return (
-    <div className="w-full h-fit 2xl:min-h-screen flex flex-col 2xl:justify-between">
+    <div className="w-full h-fit flex flex-col px-4 md:px-[30px] xl:px-[50px] 2xl:px-[110px]">
       {/* Hero Section */}
-      <p className="text-2xl md:text-5xl font-bold text-center">
-        How Our
-        <span className="italic font-bruno text-[var(--primary)]"> APP </span> &
-        <span className="italic font-bruno"> WEBSITE</span>
-        <br /> Creation Process works
-      </p>
+      <div className="mb-10 lg:mb-20">
+        <p className="font-bold font-bruno text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl ">
+          OUR
+          <span className="text-[var(--primary)] "> CREATION </span>
+          PROCESS
+        </p>
+      </div>
 
       {/* Process Section */}
-      <section className="mx-auto w-full 2xl:max-w-7xl mt-14 xl:mt-20 2xl:mt-0">
+      <section className="mx-auto w-full 2xl:max-w-7xl">
         {/* pc version */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {steps.map((step, i) => (
             <div
               key={i}
-              className="rounded-3xl bg-neutral-900 backdrop-blur-sm border border-dashed border-neutral-700 px-7 py-6 flex flex-col justify-center gap-3 hover:border-neutral-600 hover:border-solid transition ease-in-out transform hover:scale-102">
+              className="rounded-3xl pattern4 backdrop-blur-sm border border-dashed border-neutral-700 px-7 py-6 flex flex-col justify-center gap-3 hover:border-neutral-600 hover:border-solid transition ease-in-out transform hover:scale-102">
               <span className="flex justify-between items-center group-hover:text-[var(--primary)]">
                 <h3 className="text-lg mb-0 md:mb-4">{step.title}</h3>
                 <p className="mb-0 md:mb-4 border border-neutral-700 rounded-full p-2">
@@ -81,16 +83,23 @@ export default function GetWebsite2() {
             return (
               <div
                 key={i}
-                onClick={() => toggleStep(i)} // 👈 now click anywhere
-                className={`rounded-3xl bg-neutral-900 px-7 py-4 flex flex-col justify-center border border-neutral-800 cursor-pointer transition duration-300 hover:scale-[1.02] hover:border-gray-600`}>
+                onClick={() => toggleStep(i)}
+                className="rounded-3xl bg-black px-7 py-4 flex flex-col justify-center border border-dashed border-neutral-900 cursor-pointer transition duration-300 hover:scale-[1.02] hover:border-gray-600">
                 <div className="flex justify-between items-center">
                   <span className="flex items-center gap-4">
-                    <p className="border border-neutral-700 rounded-full p-2">
+                    <p className="border border-dashed border-neutral-800 bg-neutral-950 rounded-full p-2">
                       {step.icon}
                     </p>
                     <p className="text-lg">{step.title}</p>
                   </span>
-                  {isOpen ? <X /> : <ChevronDown />}
+
+                  {/* Animated icon */}
+                  <div
+                    className={`transition-transform duration-300 ease-in-out ${
+                      isOpen ? "rotate-45" : "rotate-0"
+                    }`}>
+                    <Plus className="transition-opacity duration-300" />
+                  </div>
                 </div>
 
                 {/* smooth open/close */}
@@ -108,7 +117,7 @@ export default function GetWebsite2() {
         </div>
       </section>
 
-      <div className="w-full h-[50px] md:w-fit flex justify-between md:justify-normal gap-4 md:gap-10  mt-14 xl:mt-20 2xl:mt-0">
+      <div className="w-full h-[50px] md:w-fit flex justify-between md:justify-normal gap-4 md:gap-10 mt-14 xl:mt-20 2xl:mt-20">
         <Button2 />
         <span className="w-0.5 h-full border border-white/20"></span>
         <Link

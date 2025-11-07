@@ -99,3 +99,164 @@ body {
   -webkit-mask-composite: destination-in;
   overflow: hidden;
 }
+
+.pattern4 {
+  background-image: linear-gradient(
+      326deg,
+      rgba(236, 236, 236, 0.04) 0%,
+      rgba(236, 236, 236, 0.04) 6%,
+      rgba(157, 157, 157, 0.04) 6%,
+      rgba(157, 157, 157, 0.04) 29%,
+      rgba(77, 77, 77, 0.04) 29%,
+      rgba(0, 0, 0, 0.04) 100%
+    ),
+    linear-gradient(
+      164deg,
+      rgba(236, 236, 236, 0.04) 0%,
+      rgba(236, 236, 236, 0.04) 36%,
+      rgba(157, 157, 157, 0.04) 36%,
+      rgba(157, 157, 157, 0.04) 61%,
+      rgba(77, 77, 77, 0.04) 61%,
+      rgba(77, 77, 77, 0.04) 100%
+    ),
+    linear-gradient(
+      336deg,
+      rgba(236, 236, 236, 0.04) 0%,
+      rgba(236, 236, 236, 0.04) 64%,
+      rgba(157, 157, 157, 0.04) 64%,
+      rgba(157, 157, 157, 0.04) 69%,
+      rgba(77, 77, 77, 0.04) 69%,
+      rgba(77, 77, 77, 0.04) 100%
+    ),
+    linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+}
+
+.pattern3 {
+  background-image: radial-gradient(
+      circle at 11% 37%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 50%,
+      transparent 50%,
+      transparent 56%,
+      transparent 56%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 82% 7%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 46%,
+      transparent 46%,
+      transparent 88%,
+      transparent 88%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 81% 79%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 33%,
+      transparent 33%,
+      transparent 89%,
+      transparent 89%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 68% 96%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 8%,
+      transparent 8%,
+      transparent 26%,
+      transparent 26%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 69% 20%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 84%,
+      transparent 84%,
+      transparent 86%,
+      transparent 86%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 49% 22%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 71%,
+      transparent 71%,
+      transparent 78%,
+      transparent 78%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 23% 60%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 6%,
+      transparent 6%,
+      transparent 40%,
+      transparent 40%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 86% 33%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 13%,
+      transparent 13%,
+      transparent 98%,
+      transparent 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 38% 60%,
+      rgba(100, 100, 100, 0.05) 0%,
+      rgba(100, 100, 100, 0.05) 15%,
+      transparent 15%,
+      transparent 61%,
+      transparent 61%,
+      transparent 100%
+    ),
+    linear-gradient(0deg, rgb(0, 0, 0), rgb(0, 0, 0));
+}
+
+.patterngrid {
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0px,
+      rgb(17, 17, 17) 1px,
+      transparent 1px,
+      transparent 51px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(17, 17, 17) 0px,
+      rgb(17, 17, 17) 1px,
+      transparent 1px,
+      transparent 51px
+    ),
+    linear-gradient(90deg, hsl(49, 0%, 3%), hsl(49, 0%, 3%));
+}
+
+.wavedarker {
+  background-image: linear-gradient(
+    150deg,
+    rgba(41, 41, 41, 0.04) 76%,
+    rgba(156, 156, 156, 0.04) 76%
+  );
+}
+.wavelight {
+  background-image: linear-gradient(
+    150deg,
+    rgba(172, 172, 172, 0.04) 76%,
+    rgba(255, 255, 255, 0.04) 76%
+  );
+}
+
+.circlebg {
+  background-image: radial-gradient(
+    circle at 80% 60%,
+    rgba(252, 252, 252, 0.05) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 50%,
+    transparent 78%,
+    transparent 78%,
+    transparent 100%
+  );
+}
