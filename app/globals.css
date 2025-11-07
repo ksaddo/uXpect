@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #f54a00;
+  --border: #414141;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-red-hat-display), sans-serif;
+
+  /* Font rendering & clarity */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* Typography rhythm */
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  word-spacing: 0.02em;
+
+  /* Responsive text scaling */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  /* Enable OpenType features */
+  font-feature-settings: "kern", "liga", "clig", "calt";
+
+  /* Fluid font size for better readability */
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.font-bruno {
+  font-family: var(--font-bruno-ace), sans-serif;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.shadow-fancy {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.fade-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/*
+.hero-path {
+  clip-path: path(
+    "M 10,40 L 70,40 L 80,30 L 80,10 L 90,0 L 140,0 L 150,10 L 150,190 L 140,200 L 10,200 L 0,190 L 0,50 L 10,40  Z"
+        "M 0,40 A 40,40 0,0,1 40,0 L 650,10 L 660,20 L 660,30 L 670,40 L 690,40 L 700,50 L 700,690 L 690,700 L 20,700 L 10,690 Z"
+
+  );
+}
+*/
+.clip-custom {
+  clip-path: path(
+    "M 0 2 L 2 0 L 78 0 L 80 2 L 80 6 L 82 8 L 98 8 L 100 10 L 100 68 L 98 70 L 2 70 L 0 68 Z"
+  );
+}
+.hex-shape {
+  --smoothness: 12px; /* control corner rounding */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  mask-image: radial-gradient(
+      circle at 0 25%,
+      transparent var(--smoothness),
+      black var(--smoothness)
+    ),
+    radial-gradient(
+      circle at 100% 25%,
+      transparent var(--smoothness),
+      black var(--smoothness)
+    ),
+    radial-gradient(
+      circle at 100% 75%,
+      transparent var(--smoothness),
+      black var(--smoothness)
+    ),
+    radial-gradient(
+      circle at 0 75%,
+      transparent var(--smoothness),
+      black var(--smoothness)
+    );
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+  overflow: hidden;
+}
